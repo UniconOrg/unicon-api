@@ -5,7 +5,6 @@ from fastapi.responses import RedirectResponse
 
 from core.middlewares.catcher import CatcherExceptionsMiddleware
 from core.middlewares.log_interceptor import LoggerMiddleware
-from core.middlewares.webhook import CallWebHookMiddleware
 from core.settings import settings
 from core.settings.database import init_db, validate_db_conections
 from core.utils.logger import logger
@@ -23,7 +22,6 @@ LoggerConfig.load_format()
 # Set all CORS enabled origins
 app.add_middleware(CatcherExceptionsMiddleware)
 app.add_middleware(LoggerMiddleware)
-app.add_middleware(CallWebHookMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[str(origin) for origin in settings.CORS_ORIGINS],

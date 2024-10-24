@@ -1,4 +1,5 @@
 
+import json
 from fastapi import Request, status
 
 from api.webhooks.v1.typeform.presentation.dtos import ResponseTypeformDto
@@ -22,7 +23,7 @@ async def create(
 ):
     logger.info("Create Code")
 
-
+    print(json.dumps(payload.model_dump(), indent=2))
 
     return EnvelopeResponse(
         data=payload.model_dump(),
