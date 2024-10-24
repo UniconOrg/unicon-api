@@ -44,6 +44,10 @@ class Settings(PydanticBaseSettings):
     DATE_TIME_FORMAT: str = "%Y-%m-%d %H:%M:%S"
     API_V1: str = "v1"
     CORS_ORIGINS: ClassVar[list[str]] = ["*"]
+    
+    # Database settings
+    # ----------------------------------------------------------------
+    POSTGRES_DSN: PostgresDsn
 
 
     # Sentry settings
