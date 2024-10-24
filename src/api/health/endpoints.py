@@ -29,7 +29,8 @@ def health_check() -> EnvelopeResponse:
     return EnvelopeResponse(
         errors=None,
         body=result,
-        status_code=status.HTTP_200_OK,
+        response_code=status.HTTP_200_OK,
+        success=True,
         successful=True,
         message="The service is online and functioning properly.",
     )
