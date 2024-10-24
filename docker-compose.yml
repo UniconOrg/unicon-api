@@ -1,0 +1,6 @@
+services:
+  app:
+    build:
+      dockerfile: Dockerfile.deploy
+    ports:
+      - 8000:8000
