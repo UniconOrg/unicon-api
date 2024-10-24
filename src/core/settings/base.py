@@ -48,6 +48,7 @@ class Settings(PydanticBaseSettings):
     # Database settings
     # ----------------------------------------------------------------
     POSTGRES_DSN: PostgresDsn
+    FIREBASE_URL: str
 
 
     # Sentry settings
